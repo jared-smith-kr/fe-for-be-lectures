@@ -29,8 +29,21 @@ users. When we get it wrong we get this:
 
 ## The Anatomy of a Frontend
 
-Historically speaking, a frontend will consist of 3 layers: a **view**, which is what is displayed to the user, a **model**, which is the state of the application (in business-logic terms), and a **controller** that mediates the interaction between them, i.e. the traditional concept of **MVC** (Model View Controller). This is a neat dictionary definition that breaks down in practice almost immediately when not enforced by the platform, and even 40+ years after its invention we're still arguing about the specifics of what that means in a given app. The actually important takeaway here is that in frontend we want to separate presentational concerns from the concerns of data and application state. There are various ways to accomplish this but the goals are reasonability and correctness: it's very, **very** hard to debug your app or even understand it at all when the business logic is spread wily-nilly across a bunch of event handlers and presentational components.
+Historically speaking, a frontend will consist of 3 layers:
 
-So perhaps a more productive framing than MVC is that a client frontend will need to have a presentational layer to display things to the user, a state layer to maintain application state (e.g. selected tab, accordion expanded, modal open, text input, as well as app-specific things like user preferences or order status), a data layer to manage data both locally on device and via network requests, and some mechanism for event dispatch to do state transistions and other effects (like POSTing a form). If you try to collapse that any further than I have here, you will have a bad time. When looking at a given piece of frontend code, it should fall into **exactly one** of those buckets. If it's more than one bucket, it's almost certainly wrong. If it doesn't fit in _any_ of those buckets, that is also a big red flag. When looking at implementing a given feature, think about what you will need in each of those layers to make it work. **Most software bugs are because of invalid state transitions**! So make the semantics of those transitions _extremely_ clear in your app!
+- A **View**, which is what is displayed to the user
+- A **Model**, which is the state of the application (in business-logic terms)
+- A **Controller** that mediates the interaction between them
+
+This is the traditional concept of **MVC** (Model View Controller). This is a neat dictionary definition that breaks down in practice almost immediately when not enforced by the platform, and even 40+ years after its invention we're still arguing about the specifics of what that means in a given app. The actually important takeaway here is that in frontend we want to separate presentational concerns from the concerns of data and application state. There are various ways to accomplish this but the goals are reasonability and correctness: it's very, **very** hard to debug your app or even understand it at all when the business logic is spread wily-nilly across a bunch of event handlers and presentational components.
+
+So perhaps a more productive framing than MVC is that a client frontend will need to have:
+
+- A presentational layer to display things to the user.
+- A state layer to maintain application state (e.g. selected tab, accordion expanded, modal open, text input, as well as app-specific things like user preferences or order status).
+- A data layer to manage data both locally on device and via network requests.
+- Some mechanism for event dispatch to do state transistions and other effects (like POSTing a form).
+
+If you try to collapse that any further than I have here, you will have a bad time. When looking at a given piece of frontend code, it should fall into **exactly one** of those buckets. If it's more than one bucket, it's almost certainly wrong. If it doesn't fit in _any_ of those buckets, that is also a big red flag. When looking at implementing a given feature, think about what you will need in each of those layers to make it work. **Most software bugs are because of invalid state transitions**! So make the semantics of those transitions _extremely_ clear in your app!
 
 Next time we'll talk about how those layers work (or don't lol) on web.
