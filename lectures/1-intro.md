@@ -25,7 +25,7 @@ None of that is to say that any of those technologies are inherently bad: I'm a 
 But anyways, it doesn't _have_ to be this way, and it shouldn't: we should be building proper [affordances](https://en.wikipedia.org/wiki/Affordance) for our
 users. When we get it wrong we get this:
 
-![Alt text](../resources/norman_door.jpeg?raw=true "Norman Door")
+![Alt text](../resources/norman_door.jpeg?raw=true "Push door with a pull handle and a sign saying 'PUSH'")
 
 ## The Anatomy of a Frontend
 
