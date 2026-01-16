@@ -22,7 +22,10 @@ The last point is bolded because it's both the most important and the most frequ
 
 None of that is to say that any of those technologies are inherently bad: I'm a big fan of relational databases. But our _usage_ of those technologies as an industry is _terrible_. We design schemas based on how it's convenient to implement and store the data rather than by the semantics of the domain we're trying to model. Don't get me wrong, that sort of data modelling is **hard**, just like deciding how to collate input into user-meaningful events is hard, and for the exact same reason. But so, so often we just don't even _try_ anymore. Actually it's even worse than that: many of us aren't even _aware_ that there's something there to be attempted, the worldview is _entirely_ constrained by the needs and quirks of decades-old technologies. If I had to name a culprit, I'd pick the fallacious idea that we can somehow split the backend and frontend and the majority of software developers can build something useful without ever thinking about the actual end users. Of course as a full stack developer I _would_ say that :P. And to be fair, frontend engineers can be just as guilty: arguing about whether the latest Javascript framework is better than the last 13 Javascript frameworks is easier and more fun than trying to actually understand and satisfy user needs.
 
-But anyways, it doesn't _have_ to be this way, and it shouldn't.
+But anyways, it doesn't _have_ to be this way, and it shouldn't: we should be building proper [affordances](https://en.wikipedia.org/wiki/Affordance) for our
+users. When we get it wrong we get this:
+
+![Alt text](../resources/norman_door.jpeg?raw=true "Norman Door")
 
 ## The Anatomy of a Frontend
 
