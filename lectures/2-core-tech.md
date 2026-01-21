@@ -60,7 +60,7 @@ Anyways, lets talk about those technologies a little more in depth. Next time we
 
 ### HTML
 
-HTML is what gives the document it's structure. It looks like this:
+HTML is what gives the document its structure. It looks like this:
 
 ```html
 <h1>Hi I'm a heading!</h1>
