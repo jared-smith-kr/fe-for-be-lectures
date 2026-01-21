@@ -184,3 +184,19 @@ I've talked a lot of smack about CSS here, with good reason, but the box model i
 ### JavaScript
 
 You know this one already. But on web frontend you ~~get to~~ have to deal with the Web APIs: DOM, localStorage, IndexedDB, Web Workers, ServiceWorker, WebAudio, 2D/3D Canvas, fetch, XmlHttpRequest, matchMedia, etc. These are synonymous with JavaScript itself to many people.
+
+## That's a Wrap
+
+Last time we talked about the breakdown of frontends from a architectural POV, each frontend needs:
+
+- A presentational layer to display things to the user.
+- A state layer to maintain application state (e.g. selected tab, accordion expanded, modal open, text input, as well as app-specific things like user preferences or order status).
+- A data layer to manage data both locally on device and via network requests.
+- Some mechanism for event dispatch to do state transistions and other effects (like POSTing a form).
+
+So to map these web technologies to those layers:
+
+- HTML and CSS live in the presentational layer.
+- JavaScript is used for basically all the other layers.
+
+I would call the rest (e.g. TCP/IP, DNS) "plumbing" but I think that reinforces the idea that they are less important to the user experience than the browser technologies and yet most problems stem from misunderstanding or misuse of the "plumbing" layer. Also you already you can see why these separate concerns above get muddled together so easily on web: we split based on technology rather than concern. Next time we'll start looking at how to use some of these technologies to build these layers out properly on web.
