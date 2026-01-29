@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#dividend-label {
+  display: block;
+}
+
+#dividend:invalid {
+  border: 1px solid red;
+}
+
+.boxed {
+  margin: 5px 10px 5px 10px;
+}

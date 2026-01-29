@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>County McCounterson</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Make Number Go Up</h1>
+    <p id="counter-output">0</p>
+    <button id="incr-count">Click Me!</button>
+  </body>
+  <script>
+    let count = 0;
+    document
+      .getElementById("incr-count")
+      .addEventListener("click", function (evt) {
+        count++;
+        document.getElementById("counter-output").textContent = String(count);
+      });
+  </script>
+</html>
