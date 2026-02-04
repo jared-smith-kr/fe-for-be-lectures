@@ -45,4 +45,4 @@ Also note that this stuff is largely table stakes for a web application in Year 
 
 And that's just the ones that I noticed! Did your implementation have the same issues?
 
-https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons/...aaaand now you know why I said web programming was difficult. The platform fights you every step of the way.
+...aaaand now you know why I said web programming was difficult. The platform fights you every step of the way.
