@@ -1,6 +1,6 @@
-# The Wrong Way Everybody Does
+# The Wrong Way Everybody Teaches
 
-This is how you make a basic web page. Nobody actually does this anymore, probably not for the last 15-20 years, although it's making something of a comeback. We'll talk about why later. Headache _first_, _then_ aspirin.
+This is how you make a basic web page, at least according to a lot of books and tutorials. Nobody actually does this anymore in non-academic contexts, probably not for the last 15-20 years, although it's making something of a comeback. We'll talk about why later. Headache _first_, _then_ aspirin.
 
 ```html
 <!doctype html>
