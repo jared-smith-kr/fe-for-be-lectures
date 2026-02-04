@@ -30,7 +30,7 @@ The server can be an extremely simple node.js express server. Given the scope in
 
 I've created an example in the `/resources/counter-site/medium-example` directory. How does your implementation stack against mine? Lets talk about the choices made. Additionally if you feel like _this is a **lot** of code to write for a simple counter site_ you are **absolutely** correct. I'm showing you why frameworks exist before we get to them. Note that they only help with part of all of this.
 
-Also note that this stuff is largely table stakes for a web application in Year of our Lord 2026 and this code is _still_ full of bugs and incomplete features. See if you can spot the bugs!
+Also note that this stuff is largely table stakes for a web application in Year of our Lord 2026 and this code is _still_ full of bugs and incomplete features. See if you can spot the them! (Expand the spoilers below after you've tried it yourself.)
 
 <details>
   <summary>Spoiler Warning!</summary>
@@ -43,6 +43,6 @@ Also note that this stuff is largely table stakes for a web application in Year 
 - undo/redo history is not persisted. If you refresh you get the current state but lose all context!
 </details>
 
-And that's just the ones that I noticed! Did your implementation have the same issues?
+And that's just the ones that I noticed! Did your implementation have the same issues? Did you notice any other issues with either my implemenattion or your own?
 
-...aaaand now you know why I said web programming was difficult. The platform fights you every step of the way.
+...aaaand now you know why I said web programming was difficult. The platform fights you every step of the way: it just wasn't _designed_ to do this sort of thing.
