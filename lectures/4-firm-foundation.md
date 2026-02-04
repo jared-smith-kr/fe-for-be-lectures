@@ -28,7 +28,7 @@ The server can be an extremely simple node.js express server. Given the scope in
 
 ## TRY IT YOURSELF BEFORE READING FURTHER
 
-I've created an example in the `/resources/counter-site/medium-example` directory. How does your implementation stack against mine? Lets talk about the choices made. Additionally if you feel like _this is a **lot** of code to write for a simple counter site_ you are **absolutely** correct. I'm showing you why frameworks exist before we get to them. Note that they only help with part of all of this.
+I've created an example in the [resources directory](../resources/counter-site/medium-example/), you can run `npm run start` in that directory and then go to [localhost port 8000](http://localhost:8000). How does your implementation stack against mine? Lets talk about the choices made. Additionally if you feel like _this is a **lot** of code to write for a simple counter site_ you are **absolutely** correct. I'm showing you why frameworks exist before we get to them. Note that they only help with part of all of this.
 
 Also note that this stuff is largely table stakes for a web application in Year of our Lord 2026 and this code is _still_ full of bugs and incomplete features. See if you can spot the them! (Expand the spoilers below after you've tried it yourself.)
 
