@@ -37,6 +37,7 @@ Also note that this stuff is largely table stakes for a web application in Year 
 
 - There's a race condition where syncing the server state on page load could overwrite fresh user input if the network call succeeds but takes longer than a second or two.
 - There's an invisible policy decision to take the server as the authoritative source of truth" over the local state but because we only ever send _valid_ states to the server it's possible to lose data on refresh despite the requirement of it being persisted. This is where you _should_ go back to design and product and ask about the intended experience, too many devs either don't think it through or make fiat decisions for stuff like this.
+- If the user's device is offline and they update state locally, then change it again on a different (online) device, when the first device comes back online it will \*overwrite with stale state **on the server\***!
 - There's no debounce or onblur for the numeric input, if a user types fast enough it's possible to accumulate a **lot** of extra states that don't actually map to anything the user intended!
 - Ideally we'd like updating the state to _automatically_ trigger a re-render without having to call `render` in event handlers.
 - undo/redo history is not persisted. If you refresh you get the current state but lose all context!
@@ -44,4 +45,4 @@ Also note that this stuff is largely table stakes for a web application in Year 
 
 And that's just the ones that I noticed! Did your implementation have the same issues?
 
-...aaaand now you know why I said web programming was difficult. The platform fights you every step of the way.
+https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons/...aaaand now you know why I said web programming was difficult. The platform fights you every step of the way.
