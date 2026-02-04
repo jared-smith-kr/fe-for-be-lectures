@@ -33,12 +33,13 @@ I've created an example in the `/resources/counter-site/medium-example` director
 Also note that this stuff is largely table stakes for a web application in Year of our Lord 2026 and this code is _still_ full of bugs and incomplete features. See if you can spot the bugs!
 
 <details>
-  <summary>Spoiler Warning!</summary> 
-  - There's a race condition where syncing the server state on page load could overwrite fresh user input if the network call succeeds but takes longer than a second or two.
-  - There's an invisible policy decision to take the server as the authoritative source of truth" over the local state but because we only ever send *valid* states to the server it's possible to lose data on refresh despite the requirement of it being persisted. This is where you *should* go back to design and product and ask about the intended experience, too many devs either don't think it through or make fiat decisions for stuff like this.
-  - There's no debounce or onblur for the numeric input, if a user types fast enough it's possible to accumulate a **lot** of extra states that don't actually map to anything the user intended!
-  - Ideally we'd like updating the state to _automatically_ trigger a re-render without having to call `render` in event handlers.
-  - undo/redo history is not persisted. If you refresh you get the current state but lose all context!
+  <summary>Spoiler Warning!</summary>
+
+- There's a race condition where syncing the server state on page load could overwrite fresh user input if the network call succeeds but takes longer than a second or two.
+- There's an invisible policy decision to take the server as the authoritative source of truth" over the local state but because we only ever send _valid_ states to the server it's possible to lose data on refresh despite the requirement of it being persisted. This is where you _should_ go back to design and product and ask about the intended experience, too many devs either don't think it through or make fiat decisions for stuff like this.
+- There's no debounce or onblur for the numeric input, if a user types fast enough it's possible to accumulate a **lot** of extra states that don't actually map to anything the user intended!
+- Ideally we'd like updating the state to _automatically_ trigger a re-render without having to call `render` in event handlers.
+- undo/redo history is not persisted. If you refresh you get the current state but lose all context!
 </details>
 
 And that's just the ones that I noticed! Did your implementation have the same issues?
