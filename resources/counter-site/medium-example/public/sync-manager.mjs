@@ -19,7 +19,6 @@ export class SyncManager {
 
   async syncServerState(state) {
     if (state) {
-      console.log(`Called with ${JSON.stringify(state)}`);
       this.#enqueued = state;
       try {
         const resp = await fetch(this.url, {
@@ -56,7 +55,6 @@ export class SyncManager {
   }
 
   syncState(state) {
-    console.log("here!");
     this.syncServerState(state).catch(console.error);
     return this.syncLocalState(state);
   }
