@@ -11,7 +11,7 @@ export class StateManager {
       // If there's a redo timeline, reset to the point of the current
       // state and start adding the fresh action to create a new redo
       // timeline.
-      this.#history = this.#history.slice(0, this.#currentIndex);
+      this.#history = this.#history.slice(0, this.#currentIndex + 1);
     }
 
     this.#history.push(state);
