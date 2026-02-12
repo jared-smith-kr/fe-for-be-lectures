@@ -1,4 +1,4 @@
-export const isValidateState = (newState) => {
+export const isValidState = (newState) => {
   // input must be divisible by count
   return !(newState.userInput % newState.count);
 };
@@ -9,14 +9,14 @@ export const displayCount = (elem, count) => {
 
 export const checkInputValidity = (elem, newState) => {
   elem.setCustomValidity(
-    isValidateState(newState) ? "" : "Not divisible by the current count!",
+    isValidState(newState) ? "" : "Not divisible by the current count!",
   );
   elem.reportValidity();
 };
 
 export const displayResult = (elem, newState) => {
   elem.textContent =
-    isValidateState(newState) && newState.count != 0
+    isValidState(newState) && newState.count != 0
       ? String(newState.userInput / newState.count)
       : "N/A";
 };

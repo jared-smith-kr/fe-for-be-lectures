@@ -4,7 +4,7 @@ import {
   checkInputValidity,
   displayResult,
   displayCount,
-  isValidateState,
+  isValidState,
 } from "./logic.mjs";
 
 class FakeHTMLElement {
@@ -43,11 +43,11 @@ const makeFakeState = (count = 0, userInput = 0) => ({
 // isValidState
 {
   console.assert(
-    isValidateState(makeFakeState(3, 5)) === false,
+    isValidState(makeFakeState(3, 5)) === false,
     "state is not valid if userInput is not divisible by count",
   );
   console.assert(
-    isValidateState(makeFakeState(2, 4) === true),
+    isValidState(makeFakeState(2, 4) === true),
     "state is valid if userInput is divisible by count",
   );
 }

@@ -11,7 +11,7 @@ import {
   checkInputValidity,
   displayCount,
   displayResult,
-  isValidateState,
+  isValidState,
 } from "./logic.mjs";
 import { SyncManager } from "./sync-manager.mjs";
 import { StateManager } from "./state.mjs";
@@ -46,7 +46,7 @@ const render = (state) => {
 // with the server, DO NOT make it aware of state validation. That's the
 // *state*Manager's job. Writing this function isn't that hard.
 const validateAndSync = (newState) => {
-  if (isValidateState(newState)) {
+  if (isValidState(newState)) {
     syncMgr.syncState(newState);
   }
 
