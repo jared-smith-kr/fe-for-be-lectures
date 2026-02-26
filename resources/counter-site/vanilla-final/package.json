@@ -1,0 +1,19 @@
+{
+  "name": "medium-example",
+  "version": "1.0.0",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "start": "node server.mjs"
+  },
+  "author": "jared-smith-kr",
+  "license": "unlicensed",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}

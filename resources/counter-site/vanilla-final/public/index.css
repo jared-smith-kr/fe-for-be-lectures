@@ -1,0 +1,76 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #666;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, #fff, aqua);
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+}
+
+main {
+  background-color: #fff;
+  min-width: 350px;
+  min-height: 400px;
+  border-radius: 12px;
+  display: grid;
+}
+
+.colored-bttn {
+  color: #fff;
+  text-shadow: 1px 1px #319184;
+  background: linear-gradient(to bottom right, #dfe9e9, #4fb0a4);
+  border: #ccc;
+  border-radius: 15px;
+}
+
+.inline-bttn {
+  min-width: 75px;
+  min-height: 30px;
+}
+
+.inline-bttn-container {
+  min-width: 235px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#incr-count {
+  min-width: 150px;
+  min-height: 40px;
+}
+
+#dividend-label {
+  display: block;
+}
+
+#dividend:invalid {
+  border: 1px solid red;
+}
+
+#dividend {
+  min-height: 25px;
+  border-radius: 8px;
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#dividend:focus {
+  border-color: aqua;
+  outline: none;
+}
+
+.boxed {
+  place-self: center;
+}
+
+::backdrop {
+  background-color: #666;
+  opacity: 0.5;
+}

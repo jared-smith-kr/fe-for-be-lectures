@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>County McCounterson</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="boxed">Make Number Go Up</h1>
+      <p class="boxed">
+        <span>Current count: </span>
+        <span id="counter-output">0</span>
+      </p>
+      <button tabindex="1" class="boxed colored-bttn" id="incr-count">Click Me!</button>
+      <label for="dividend" id="dividend-label" class="boxed"
+        >Input a number!</label
+      >
+      <input tabindex="2" class="boxed" type="number" id="dividend" />
+      <p class="boxed">
+        <span>Result: </span>
+        <span id="result-output">0<span>
+      </p>
+      <div class="inline-bttn-container">
+        <button tabindex="3" class="colored-bttn inline-bttn" id="undo-bttn">undo</button>
+        <button tabindex="4" class="colored-bttn inline-bttn" id="redo-bttn">redo</button>
+        <button tabindex="5" class="colored-bttn inline-bttn" id="reset-bttn">reset</button>
+      </div>
+      <button tabindex="6" class="boxed colored-bttn" id="show-stats">Show Statistics</button>
+    </main>
+    <dialog closedby="any" id="stats-dialog">
+      <p class="boxed">
+        <span>Times you incremented the counter: </span>
+        <span id="counter-incr-stat">0</span>
+      </p>
+      <p class="boxed">
+        <span>Times you input a number: </span>
+        <span id="input-stat">0</span>
+      </p>
+      <p class="boxed">
+        <span>Times you used undo: </span>
+        <span id="undo-stat">0</span>
+      </p>
+      <p class="boxed">
+        <span>Times you used redo: </span>
+        <span id="redo-stat">0</span>
+      </p>
+      <p class="boxed">
+        <span>Times you reset to default: </span>
+        <span id="reset-stat">0</span>
+      </p>
+      <button autofocus class="boxed colored-bttn" id="dimiss-dialog">Close</button>
+    </dialog>
+  </body>
+  <script type="module" src="./index.js"></script>
+</html>
